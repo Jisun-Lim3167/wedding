@@ -1,0 +1,112 @@
+/* 기본 스타일 (전체 글씨체 설정) */
+body {
+    font-family: "Gaegu", cursive;  /* 귀여운 손글씨 스타일 */
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* 부드러운 핑크 계열 배경 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* 세로 정렬 */
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;  /* 스크롤 가능 */
+}
+
+/* 카드 컨테이너 */
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 20px auto;  /* 카드 사이 간격 */
+}
+
+/* 카드 스타일 */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 20px;  /* 카드 사이 여백 */
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    border: 3px solid #ff7eb3; /* 핑크 테두리 추가 */
+}
+
+/* 카드에 호버 효과 */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* 제목 (더 귀엽고 강조된 폰트 사용) */
+h1, h2 {
+    font-family: "Cute Font", sans-serif; /* 동글동글한 귀여운 글씨체 */
+    font-size: 28px;
+    color: #ff5e78;
+    text-shadow: 2px 2px 5px rgba(255, 94, 120, 0.3);
+}
+
+/* 본문 스타일 */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* 버튼 스타일 */
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    background: #ff7eb3;
+    color: white;
+    font-size: 16px;
+    font-family: "Gaegu", cursive;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #ff5e78;
+    transform: scale(1.05);
+}
+
+/* 텍스트 애니메이션 */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.fade-in.delay {
+    animation-delay: 1s;
+}
+
+.text-zoom {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.text-shake {
+    display: inline-block;
+    animation: shake 0.8s ease-in-out infinite alternate;
+}
+
+/* 애니메이션 키프레임 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
+
